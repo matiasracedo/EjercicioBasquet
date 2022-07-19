@@ -10,3 +10,16 @@ C:\Users\matia\Projects\AltosVerdes\AltosVerdes\obj\Debug\AltosVerdes.csproj.Cor
 C:\Users\matia\Projects\AltosVerdes\AltosVerdes\obj\Debug\AltosVerdes.exe
 C:\Users\matia\Projects\AltosVerdes\AltosVerdes\obj\Debug\AltosVerdes.pdb
 C:\Users\matia\Projects\AltosVerdes\AltosVerdes\obj\Debug\AltosVerdes.TantoFalta.resources
+C:\Users\matia\Projects\Ejercicio 2\EjercicioBasquet\AltosVerdes\bin\Debug\AltosVerdes.exe.config
+C:\Users\matia\Projects\Ejercicio 2\EjercicioBasquet\AltosVerdes\bin\Debug\AltosVerdes.exe
+C:\Users\matia\Projects\Ejercicio 2\EjercicioBasquet\AltosVerdes\bin\Debug\AltosVerdes.pdb
+C:\Users\matia\Projects\Ejercicio 2\EjercicioBasquet\AltosVerdes\obj\Debug\AltosVerdes.csprojAssemblyReference.cache
+C:\Users\matia\Projects\Ejercicio 2\EjercicioBasquet\AltosVerdes\obj\Debug\AltosVerdes.CargaEquipos.resources
+C:\Users\matia\Projects\Ejercicio 2\EjercicioBasquet\AltosVerdes\obj\Debug\AltosVerdes.Form1.resources
+C:\Users\matia\Projects\Ejercicio 2\EjercicioBasquet\AltosVerdes\obj\Debug\AltosVerdes.Properties.Resources.resources
+C:\Users\matia\Projects\Ejercicio 2\EjercicioBasquet\AltosVerdes\obj\Debug\AltosVerdes.Resultado.resources
+C:\Users\matia\Projects\Ejercicio 2\EjercicioBasquet\AltosVerdes\obj\Debug\AltosVerdes.TantoFalta.resources
+C:\Users\matia\Projects\Ejercicio 2\EjercicioBasquet\AltosVerdes\obj\Debug\AltosVerdes.csproj.GenerateResource.cache
+C:\Users\matia\Projects\Ejercicio 2\EjercicioBasquet\AltosVerdes\obj\Debug\AltosVerdes.csproj.CoreCompileInputs.cache
+C:\Users\matia\Projects\Ejercicio 2\EjercicioBasquet\AltosVerdes\obj\Debug\AltosVerdes.exe
+C:\Users\matia\Projects\Ejercicio 2\EjercicioBasquet\AltosVerdes\obj\Debug\AltosVerdes.pdb

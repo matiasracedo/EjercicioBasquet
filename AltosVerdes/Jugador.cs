@@ -32,13 +32,13 @@ namespace AltosVerdes
         public int Faltas
         {
             get { return faltas; }
-            set { faltas += value; }
+            set { faltas = value; }
         }
 
         public int Tantos
         {
             get { return tantos; }
-            set { tantos += value; }
+            set { tantos = value; }
         }
     }
 }

@@ -145,9 +145,22 @@ namespace AltosVerdes
                 int tanto = Convert.ToInt32(ventana.cBtanto.SelectedItem.ToString());
                 if (equipo == 0)
                 {
-                    equipoLocal.cargarTanto(camiseta, tanto);
+                    if (equipoLocal.Jugadores[camiseta - 1].Faltas < 5) equipoLocal.cargarTanto(camiseta, tanto);
+                    else
+                    {
+                        MessageBox.Show(String.Format("Jugador № {0} fuera por faltas!", camiseta));
+                    }
+                    
                 }
-                else equipoVisitante.cargarTanto(camiseta, tanto);
+                else
+                {
+                    if (equipoVisitante.Jugadores[camiseta - 1].Faltas < 5) equipoVisitante.cargarTanto(camiseta, tanto);
+                    else
+                    {
+                        MessageBox.Show(String.Format("Jugador № {0} fuera por faltas!", camiseta));
+                    }
+                }
+                    
             }
             ventana.Dispose();
             actualizarTablero();
@@ -165,9 +178,20 @@ namespace AltosVerdes
                 int camiseta = Convert.ToInt32(ventana.cBjugador.SelectedItem.ToString());
                 if (equipo == 0)
                 {
-                    equipoLocal.cargarFalta(camiseta);
+                    if (equipoLocal.Jugadores[camiseta-1].Faltas < 5) equipoLocal.cargarFalta(camiseta);
+                    else
+                    {
+                        MessageBox.Show(String.Format("Jugador № {0} fuera por faltas!", camiseta));
+                    }
                 }
-                else equipoVisitante.cargarFalta(camiseta);
+                else
+                {
+                    if (equipoVisitante.Jugadores[camiseta-1].Faltas < 5) equipoVisitante.cargarFalta(camiseta);
+                    else
+                    {
+                        MessageBox.Show(String.Format("Jugador № {0} fuera por faltas!", camiseta));
+                    }
+                }
             }
             ventana.Dispose();
             actualizarTablero();
@@ -177,14 +201,45 @@ namespace AltosVerdes
         {
             // Creo nueva ventana modal resultado
             Resultado ventana = new Resultado();
+            string ganador;
+            if (equipoLocal.Puntos > equipoVisitante.Puntos) ganador = equipoLocal.Nombre;
+            else ganador = equipoVisitante.Nombre;
+            ventana.labGanador.Text = ganador;
             // LLeno columna local
-            ventana.lBlocal.Items.Add("LOCALES");
-            ventana.lBlocal.Items.Add("Jugador       |       Puntos");
-            ventana.lBlocal.Items.Add("*****************************");
+            
             for (int i = 0; i < 12; i++)
             {
-                ventana.lBlocal.Items.Add(equipoLocal.Jugadores[i].Nombre+"             "+ equipoLocal.Jugadores[i].Tantos.ToString());
+                string nombre = "";
+                string tantos = "";
+                if (equipoVisitante.Jugadores[i] != null)
+                {
+                    tantos = equipoVisitante.Jugadores[i].Tantos.ToString();
+                    nombre = equipoVisitante.Jugadores[i].Nombre;
+                }
+                if (nombre != "" && tantos != "")
+                {
+                    ventana.lBvisitante.Items.Add(String.Format("{1,1} {0,15}", nombre, tantos));
+                }
+                
             }
+            // LLeno columna local
+
+            for (int i = 0; i < 12; i++)
+            {
+                string nombre = "";
+                string tantos = "";
+                if (equipoLocal.Jugadores[i] != null)
+                {
+                    tantos = equipoLocal.Jugadores[i].Tantos.ToString();
+                    nombre = equipoLocal.Jugadores[i].Nombre;
+                }
+                if (nombre != "" && tantos != "")
+                {
+                    ventana.lBlocal.Items.Add(String.Format("{1,1} {0,15}", nombre, tantos));
+                }
+                
+            }
+            
 
             ventana.ShowDialog();
             ventana.Dispose();

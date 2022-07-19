@@ -67,7 +67,7 @@ namespace AltosVerdes
 
         public void cargarFalta(int camiseta)
         {
-            jugadores[camiseta - 1].Faltas++;
+            jugadores[camiseta - 1].Faltas += 1;
             faltas++;
         }
 
