@@ -205,6 +205,8 @@ namespace AltosVerdes
             if (equipoLocal.Puntos > equipoVisitante.Puntos) ganador = equipoLocal.Nombre;
             else ganador = equipoVisitante.Nombre;
             ventana.labGanador.Text = ganador;
+            ventana.labResultLocal.Text = equipoLocal.Puntos.ToString();
+            ventana.labResultVisit.Text = equipoVisitante.Puntos.ToString();
             // LLeno columna local
             
             for (int i = 0; i < 12; i++)
@@ -218,7 +220,7 @@ namespace AltosVerdes
                 }
                 if (nombre != "" && tantos != "")
                 {
-                    ventana.lBvisitante.Items.Add(String.Format("{1,1} {0,15}", nombre, tantos));
+                    ventana.lBvisitante.Items.Add(String.Format("{1,1} {0,18}", nombre, tantos));
                 }
                 
             }
@@ -235,7 +237,7 @@ namespace AltosVerdes
                 }
                 if (nombre != "" && tantos != "")
                 {
-                    ventana.lBlocal.Items.Add(String.Format("{1,1} {0,15}", nombre, tantos));
+                    ventana.lBlocal.Items.Add(String.Format("{1,1} {0,18}", nombre, tantos));
                 }
                 
             }
@@ -243,6 +245,7 @@ namespace AltosVerdes
 
             ventana.ShowDialog();
             ventana.Dispose();
+            Close();
         }
     }
 }

@@ -39,6 +39,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.labResultLocal = new System.Windows.Forms.Label();
+            this.labResultVisit = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -148,11 +150,31 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "VISITANTES";
             // 
+            // labResultLocal
+            // 
+            this.labResultLocal.AutoSize = true;
+            this.labResultLocal.Location = new System.Drawing.Point(144, 55);
+            this.labResultLocal.Name = "labResultLocal";
+            this.labResultLocal.Size = new System.Drawing.Size(19, 13);
+            this.labResultLocal.TabIndex = 11;
+            this.labResultLocal.Text = "00";
+            // 
+            // labResultVisit
+            // 
+            this.labResultVisit.AutoSize = true;
+            this.labResultVisit.Location = new System.Drawing.Point(403, 55);
+            this.labResultVisit.Name = "labResultVisit";
+            this.labResultVisit.Size = new System.Drawing.Size(19, 13);
+            this.labResultVisit.TabIndex = 12;
+            this.labResultVisit.Text = "00";
+            // 
             // Resultado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 376);
+            this.Controls.Add(this.labResultVisit);
+            this.Controls.Add(this.labResultLocal);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -184,5 +206,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label labResultLocal;
+        public System.Windows.Forms.Label labResultVisit;
     }
 }
